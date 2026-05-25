@@ -1,0 +1,20 @@
+<h1>The winner is: {{ gameData.winner!.name }}</h1>
+<h2>Amount: {{ gameData.winner!.amount }}</h2>
+
+<h1>Final Standings</h1>
+<table>
+    <tr>
+        <th>Position</th>
+        <th>Name</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>{{ gameData.winner!.name }}</td>
+    </tr>
+
+    <tr *ngFor="let player of gameData.positions; let i = index">
+        <td>{{ i + 2 }}</td>
+        <td>{{ player.name }}</td>
+    </tr>
+</table>

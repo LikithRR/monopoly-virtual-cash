@@ -1,0 +1,13 @@
+<h1>Add Players</h1>
+
+<div *ngFor="let player of playerInputs; let i = index; trackBy: trackByIndex">
+  <input type="text" placeholder="Enter Name" [(ngModel)]="playerInputs[i]" />
+  <button (click)="removePlayerBox(i)">Remove</button>
+</div>
+
+<button (click)="addPlayerBox()">Add Player</button>
+
+<h1>Starting Cash</h1>
+<input type="number" [(ngModel)]="gameData.startingCash" />
+
+<button (click)="startGame()" [disabled]="!validGame">Start the Game</button>
