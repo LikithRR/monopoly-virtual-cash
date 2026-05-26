@@ -53,12 +53,36 @@ table {
   width: 100%;
   margin-top: 20px;
 
+  border-collapse: collapse;
+
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   overflow: hidden;
 
-  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+
+  table-layout: fixed;
+}
+
+tr {
+  display: table-row;
+}
+
+th,
+td {
+  display: table-cell;
+
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 th {
-  color: var(--money-gold);
+  color: #fbbf24;
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: bold;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
